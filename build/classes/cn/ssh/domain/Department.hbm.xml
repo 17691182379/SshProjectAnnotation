@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="cn.ssh.domain.Department" table="ssh_department">
+		
+		<id name="id" type="java.lang.Integer">
+			<column name="id" length="10"/>
+			<generator class="native"/>
+		</id>
+		
+		<property name="departmentName" type="java.lang.String">
+			<column name="department_name" length="50"/>
+		</property>
+		
+		
+	</class>
+	
+	
+</hibernate-mapping>

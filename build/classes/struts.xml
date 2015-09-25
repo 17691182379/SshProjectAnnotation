@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<!-- 设置开发模式，配置文件改了以后不用重新启动 -->
+    <constant name="struts.devMode" value="true"/>
+		
+	<!-- 该属性指定视图标签默认的视图主题,该属性的默认值是xhtml -->
+	<constant name="struts.ui.theme" value="simple" />
+    
+	<!-- 把struts的请求委托给spring管理,
+		作用:创建Action实例的过程由spring处理,其他的还是有struts2自己处理 -->
+	<constant name="struts.objectFactory" value="spring" />
+	
+	<!-- 是否开启动态方法调用-->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+	
+	<!-- 引用 -->
+	<!-- <include file="struts/struts_employee.xml" /> -->
+	
+</struts>

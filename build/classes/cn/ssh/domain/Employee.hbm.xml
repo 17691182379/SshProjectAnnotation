@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+    <class name="cn.ssh.domain.Employee" table="ssh_employee">
+    
+        <id name="id" type="java.lang.Integer">
+            <column name="id" length="10" />
+            <generator class="native" />
+        </id>
+        
+        <property name="lastName" type="java.lang.String">
+            <column name="last_name" length="50"/>
+        </property>
+        
+        <property name="email" type="java.lang.String">
+            <column name="email" length="50" />
+        </property>
+        
+        <property name="birth" type="java.util.Date">
+            <column name="birth" />
+        </property>
+        
+        <property name="createTime" type="java.util.Date">
+            <column name="create_time" />
+        </property>
+        
+        <many-to-one name="department" class="cn.ssh.domain.Department" cascade="save-update">
+            <column name="dept_id" length="10" />
+        </many-to-one>
+        
+    </class>
+</hibernate-mapping>
